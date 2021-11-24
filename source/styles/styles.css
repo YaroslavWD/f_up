@@ -1,0 +1,36 @@
+@import "font.scss";
+@import "variables.scss";
+@import "~normalize.css";
+
+@import "container.scss";
+@import "input.scss";
+@import "page.scss";
+@import "donation.scss";
+@import "sidebar.scss";
+@import "info.scss";
+@import "settings.scss";
+@import "input-range.scss";
+@import "button.scss";
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+}
+
+.fieldset {
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+
+.visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}

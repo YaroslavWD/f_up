@@ -1,0 +1,252 @@
+.settings__tab-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 31px;
+  padding-left: 24px;
+  border-bottom: 1px solid $gray-40;
+}
+
+.settings__tab-content {
+  padding: 40px 45px 39px;
+  margin: 0;
+  list-style: none;
+}
+
+.settings__tab-title {
+  padding: 13px 16px 11px;
+  margin: 0;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: -1px;
+  border-bottom: 1px solid transparent;
+  transition: all, 0.1s;
+}
+
+.settings__tab-item {
+  transition: all, 0.1s;
+  &:hover {
+    cursor: pointer;
+    color: $color-green;
+    transition: all, 0.1s;
+  }
+}
+
+.settings__tab-item--active {
+  .settings__tab-title {
+    color: $color-green;
+    border: 1px solid $gray-40;
+    border-bottom: 1px solid #FFFFFF;
+    border-radius: 6px 6px 0 0
+  }
+}
+
+.settings__tab-content-title {
+  padding: 0;
+  margin: 0;
+  display: none;
+}
+
+.settings__tab-content-item {
+  display: flex;
+}
+
+.settings__tab-content-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.settings__content--type {
+  select {
+    min-width: 80px;
+  }
+}
+
+.settings__tab-label {
+  width: 140px;
+  text-align: right;
+  &--start {
+    align-self: flex-start;
+  }
+}
+
+.settings__input-goal {
+  max-width: 192px;
+  margin-right: 24px;
+}
+
+.settings__input-designation {
+  min-width: 296px;
+}
+
+.settings__select-goal {
+  min-width: 80px
+}
+
+.settings__radio-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  padding-bottom: 24px;
+}
+
+.settings__radio-list-item:last-child {
+  .settings__label-radio {
+    margin-bottom: 0;
+  }
+}
+
+.settings__button-block {
+  padding: 23px 32px 23px;
+  background-color: $color-special;
+  border-radius: 0 0 8px 8px;
+  border-top: 1px solid $gray-40;
+}
+
+.settings__button {
+  margin-right: 10px;
+}
+
+.settings__tab-content-item--select {
+  .settings__tab-content-inner {
+    visibility: visible;
+    overflow: visible;
+    height: 100%;
+    opacity: 100%;
+    transition: all, 0.3s;
+  }
+}
+
+.settings__tab-content-inner {
+  visibility: hidden;
+  overflow: hidden;
+  height: 0;
+  opacity: 0;
+  transition: all, 0.3s;
+}
+
+@media (max-width: $tablet) {
+  .settings__tab-list {
+    display: none;
+  }
+
+  .settings__tab-content {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  
+  .settings__tab-content-title {
+    display: block;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    padding: 16px 32px;
+    transition: all, 0.3s;
+  }
+
+  .settings__tab-content-item {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid $gray-40;
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  .settings__tab-content-wrapper {
+    padding: 16px 32px 32px;
+  }
+
+  .settings__tab-content-item--select {
+    .settings__tab-content-title {
+      color: $color-green;
+      transition: all, 0.3s;
+    }
+
+    .settings__tab-content-inner {
+      visibility: visible;
+      overflow: visible;
+      height: 100%;
+      opacity: 100%;
+      transition: all, 0.3s;
+    }
+  }
+
+  .settings__tab-content-inner {
+    visibility: hidden;
+    overflow: hidden;
+    height: 0;
+    opacity: 0;
+    transition: all, 0.3s;
+  }
+}
+
+
+@media (max-width: $tablet) {
+  .settings__tab-content-wrapper {
+    .input-row {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .input-container {
+      align-items: flex-start;
+    }
+  }
+
+  .settings__tab-label {
+    width: 100%;
+    text-align: left;
+    margin-right: 0;
+    padding-bottom: 4px;
+  }
+}
+
+@media (max-width: $phone) {
+  .settings__tab-content-wrapper {
+    .input-container {
+      align-items: stretch;
+      width: 100%;
+    }
+  }
+
+  .settings__tab-content-wrapper {
+    padding: 32px 24px;
+  }
+
+  .settings__input-designation {
+    min-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .settings__select-goal {
+   flex-grow: 1;
+  }
+
+  .settings__input-goal {
+    margin-right: 16px;
+  }
+
+  .settings__button-block {
+    display: flex;
+    flex-direction: column;
+
+    .settings__button {
+      margin-bottom: 16px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+}
