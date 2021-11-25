@@ -11,6 +11,8 @@
 @import "settings.scss";
 @import "input-range.scss";
 @import "button.scss";
+@import "radioButton.scss";
+@import "checkbox.scss";
 
 *, ::after, ::before {
     box-sizing: border-box;

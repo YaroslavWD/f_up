@@ -5,9 +5,8 @@
   max-width: 218px;
   width: 218px;
 }
-.input-range:focus {
-
-
+.input-range:focus, .input-range:active, {
+  outline-color: $color-green;
 }
 .input-range::-webkit-slider-runnable-track {
   width: 100%;
