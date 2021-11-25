@@ -105,7 +105,7 @@
   padding-bottom: 24px;
 
   &--big {
-    padding-bottom: 16px;
+    padding-bottom: 14px;
   }
 
   &:last-child {
@@ -113,86 +113,17 @@
   }
 }
 
-.input-radio {
-  display: none;
-}
-
-.label-radio {
-  padding-left: 36px;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
-  position: relative;
-  margin-bottom: 17px;
-  display: block;
-  cursor: pointer;
-
-
-  &::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: -1px;
-    width: 24px;
-    height: 24px;
-    box-sizing: border-box;
-    border-radius: 50%;
-    transition: all, 0.1s;
-    border: 1px solid $gray-70;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    transition: all, 0.1s;
-    box-sizing: border-box;
-    left: 6px;
-    top: 5px;
-    background-color: transparent;
-  }
-
-  &:hover {
-    cursor: pointer;
-    &::before {
-      border: 2px solid $color-green;
-    }
-  }
-}
-
-.input-radio:checked + .label-radio::before {
-  border: 2px solid $color-green;
-  transition: all, 0.1s;
-}
-.input-radio:checked + .label-radio::after {
-  background-color: $color-green;
-  transition: all, 0.1s;
-}
-
-.input-checkbox {
-  display: none;
-}
-
 .label-checkbox {
-  padding-left: 36px;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
   position: relative;
-  margin-bottom: 16px;
-  display: block;
   cursor: pointer;
+  margin-bottom: 0;
+  display: flex;
 
-  &::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    width: 24px;
-    height: 24px;
-    border-radius: 4px;
-    border: 2px solid $color-green;
+  &:focus,&:active {
+    outline-color: $color-green;
   }
 }
 

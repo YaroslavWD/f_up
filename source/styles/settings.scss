@@ -93,7 +93,7 @@
   padding: 0;
   margin: 0;
   list-style: none;
-  padding-bottom: 24px;
+  padding-bottom: 18px;
 }
 
 .settings__radio-list-item:last-child {
@@ -129,6 +129,10 @@
   height: 0;
   opacity: 0;
   transition: all, 0.3s;
+}
+
+.settings__radio-list-item {
+  padding-top: 6px;
 }
 
 @media (max-width: $tablet) {
